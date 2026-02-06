@@ -1,21 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Pedro Castillo Ink - Tattoo Studio
 
-# Run and deploy your AI Studio app
+Sitio web profesional para el estudio de tatuajes de Pedro Castillo, especializado en realismo y sombras.
 
-This contains everything you need to run your app locally.
+## 🚀 Características
 
-View your app in AI Studio: https://ai.studio/apps/drive/1hf5TXg0nEZOCW1llTW1xjvI5k8RYElaY
+- **Frontend:** React + Vite + Tailwind CSS (Diseño moderno y responsivo).
+- **Backend:** Node.js + Express (Servidor optimizado con compresión y seguridad).
+- **Infraestructura:** Dockerizado para fácil despliegue.
 
-## Run Locally
+## 🛠️ Ejecutar Localmente (Desarrollo)
 
-**Prerequisites:**  Node.js
+**Prerrequisitos:** Node.js v20+
 
+1. Instalar dependencias en la raíz (esto instalará tanto cliente como servidor):
+   ```bash
+   npm install
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-# PedroCastilloInk
+2. Ejecutar en modo desarrollo:
+   ```bash
+   # En una terminal (Backend)
+   npm run dev:server
+   
+   # En otra terminal (Frontend)
+   cd client && npm run dev
+   ```
+
+## 🐳 Despliegue con Docker (Producción)
+
+El proyecto está configurado para compilarse y servirse como una sola unidad optimizada.
+
+1. **Construir y levantar el contenedor:**
+   ```bash
+   docker compose up --build -d
+   ```
+
+2. **Ver el sitio:**
+   Abre tu navegador en `http://localhost:3000`.
+
+3. **Para detener:**
+   ```bash
+   docker compose down
+   ```
+
+## 📁 Estructura del Proyecto
+
+- `/client`: Código fuente del Frontend (React).
+- `/server`: Código fuente del Backend (Express).
+- `Dockerfile`: Configuración multi-etapa para construir la imagen de producción.
